@@ -109,3 +109,14 @@ Route::resource('photos', PhotoController::class);
 Route::resource('photos', PhotoController::class)->except([
     'create', 'store', 'update', 'destroy'
     ]);
+
+
+//MEMBUAT VIEW
+// Route::get('/greeting', function () {
+//     return view('hello', ['name' => 'Asti!']);
+//     });
+
+    // Route::get('/greeting', function () {
+    //     return view('blog.hello', ['name' => 'Asti!']);
+    //     });
+Route::get('/greeting', [WelcomeController::class, 'greeting']);
